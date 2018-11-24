@@ -1,0 +1,18 @@
+import networkx as nx 
+import matplotlib.pyplot as plt
+
+G=nx.DiGraph() 
+
+G.add_edge('Undang-Undang Nomor 38 Tahun 2004','Peraturan Pemerintah No. 34 Tahun 2006 ') 
+G.add_edge('Peraturan Pemerintah No. 34 Tahun 2006 ','Peraturan Daerah Nomor 13 TAHUN 2013 Tahun 2013')
+G.add_edge('Peraturan Pemerintah No. 34 Tahun 2006','perda no 5 th 2011')
+G.add_edge('Peraturan Pemerintah No. 34 Tahun 2006','Peraturan Daerah Nomor 23 Tahun 2008')
+G.add_edge('Peraturan Pemerintah No. 34 Tahun 2006','Peraturan Menteri Perhubungan Nomor PM 34 Tahun 2014')
+G.add_edge('Peraturan Pemerintah No. 34 Tahun 2006','Peraturan Pemerintah Nomor 74 Tahun 2014') 
+
+nx.draw_networkx(G)
+plt.axis('off')
+plt.show()
+
+#transivity
+print(nx.transitivity(G))
